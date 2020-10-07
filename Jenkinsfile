@@ -1,10 +1,10 @@
 node {
     stage ('Checkout') {
-        git branch:'simplify-jenkinsfile', url: 'https://github.com/XiongKezhi/codingstyle.git'
+        git branch:env.BRANCH_NAME, url:env.GIT_URL
     }
 
     stage ('Build and Static Analysis') {
-        sh 'mvn -V -e clean verify -Dmaven.test.failure.ignore -Dgpg.skip'
+        sh 'mvn -V -e clean verify -Dmaven.test.failure.ignore'
 
         recordIssues tools: [java(), javaDoc()], aggregatingResults: 'true', id: 'java', name: 'Java'
         recordIssues tool: errorProne(), healthy: 1, unhealthy: 20
