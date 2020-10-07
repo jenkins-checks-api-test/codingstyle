@@ -1,6 +1,6 @@
 node {
     stage ('Checkout') {
-        git branch:env.BRANCH_NAME, url:https://github.com/jenkins-checks-api-test/codingstyle
+        git branch:env.BRANCH_NAME, url:'https://github.com/jenkins-checks-api-test/codingstyle'
     }
 
     stage ('Build and Static Analysis') {
