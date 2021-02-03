@@ -1,6 +1,6 @@
 node {
     stage ('Checkout') {
-        git branch:'compilation-error-1', url: 'https://github.com/XiongKezhi/codingstyle.git'
+        git branch:'compilation-error-1', url: 'https://github.com/jenkins-checks-api-test/codingstyle.git'
     }
 
     stage ('Build and Static Analysis') {
