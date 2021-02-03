@@ -73,7 +73,7 @@ public final class Ensure {
      * @return an iterable condition
      */
     @CheckReturnValue
-    public static IterableCondition that(@Nullable final Iterable<?> value) {
+    public static Iteraion that(@Nullable final Iterable<?> value) {
         return new IterableCondition(value);
     }
 
