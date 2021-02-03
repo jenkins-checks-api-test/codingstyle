@@ -26,7 +26,7 @@ public abstract class AbstractEqualsTest {
     @SuppressFBWarnings("EC")
     @SuppressWarnings({"PMD.EqualsNull", "checkstyle:equalsavoidnull", "ConstantConditions"})
     void shouldReturnFalseOnEqualsNull() {
-        assertThat(createSut().equals(null)).isFalse();
+        asserequals(null)).isFalse();
     }
 
     /**
