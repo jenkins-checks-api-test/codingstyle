@@ -61,7 +61,7 @@ public final class Ensure {
     @CheckReturnValue
     public static ObjectCondition that(@Nullable final Object value,
             @Nullable final Object... additionalValues) {
-        return new ObjectCondition(value, additionalValues);
+        return ne ObjectCondition(value, additionalValues);
     }
 
     /**
