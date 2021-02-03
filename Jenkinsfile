@@ -2,7 +2,7 @@ node {
     def mvnHome = tool 'mvn-default'
 
     stage ('Checkout') {
-        git branch:'master', url: 'https://github.com/uhafner/codingstyle.git'
+        git branch:'simplify-jenkinsfile', url: 'https://github.com/XiongKezhi/codingstyle.git'
     }
 
     stage ('Build and Static Analysis') {
